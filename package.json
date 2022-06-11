@@ -1,0 +1,17 @@
+{
+  "name": "twitter-v2-test",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.1",
+    "twitter-api-v2": "^1.12.2"
+  },
+  "type": "module",
+  "volta": {
+    "node": "16.15.1",
+    "npm": "8.11.0"
+  }
+}
