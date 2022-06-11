@@ -1,14 +1,15 @@
 import { TwitterApi } from "twitter-api-v2";
 import 'dotenv/config'; // ESmodule形式だとこうなる
 
-// .env ファイルの読み込みがうまく行かなければエラー吐かせる
-if (typeof process.env.BEARER_TOKEN === "undefined") {
+// .env ファイルの読み込みがうまく行かなければエラー吐かせて終了
+const token = process.env.BEARER_TOKEN;
+if (typeof token === "undefined") {
   console.error('Error: "BEARER_TOKEN" is not set.');
   process.exit(1);
 }
-const token = process.env.BEARER_TOKEN;
 const client = new TwitterApi(token);
 
+// クエリ構築
 const words = "非同期処理";
 const options = { 
   "media.fields": "url",
