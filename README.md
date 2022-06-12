@@ -3,8 +3,10 @@
 
 JS で Twitter API を叩く練習。以下 `npm install` でインストールして使うパッケージ。
 
-- [twitter-api-v2](https://github.com/PLhery/node-twitter-api-v2) : node 環境で使える twitter API v2 のラッパー
-- [dotenv](https://github.com/motdotla/dotenv) : カレントディレクトリに置かれた `.env` ファイルから環境変数を読むためのモジュール
+- [twitter-api-v2](https://github.com/PLhery/node-twitter-api-v2) : node 環境で使える twitter API v2 のラッパーライブラリ
+- [dotenv](https://github.com/motdotla/dotenv) : カレントディレクトリに置かれた `.env` ファイルから環境変数を読むためのライブラリ
+- [date-fns](https://github.com/date-fns/date-fns) : 日付操作のライブラリ
+- [csv-stringify](https://github.com/adaltas/node-csv/tree/master/packages/csv-stringify) : CSV のパースライブラリ
 
 ## セットアップ方法
 
@@ -55,5 +57,6 @@ $ npm start
 > node index.js
 
 # オブジェクトの配列で取得ツイートが出力される
+--> succeed writing date!
 ```
 
