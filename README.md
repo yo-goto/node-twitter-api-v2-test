@@ -8,9 +8,23 @@ JS で Twitter API を叩く練習。以下 `npm install` でインストール�
 
 ## セットアップ方法
 
-Node.js とツールチェインの管理ツールである[Volta](https://volta.sh)をインストール。`package.json` でバージョン固定(`volta pin node`)してあるのでそのバージョンの Node と npm を使用する。
+Node.js とツールチェインの管理ツールである[Volta](https://volta.sh)を Homebrew でインストール。`package.json` でバージョン固定(`volta pin node`)してあるのでそのバージョンの Node と npm を使用する。
 
-依存関係を以下のコマンドでローカルインストール。
+```sh
+# node のLTS版がインストールされる(16.15.1)
+# npm も同時にインストールされる
+$ brew install volta
+```
+
+`VOLTA_HOME` 環境変数に `$HOME/.volta` をセットして、`PATH` に `$VOLTA_HOME/bin` を追加する。fish shell の場合は `config.fish` に以下の内容を記載する。
+
+```sh:config.fish
+# fish
+set -gx VOLTA_HOME $HOME/.volta
+fish_add_path $VOLTA_HOME/bin
+```
+
+`package.json` に記載されている依存関係を以下のコマンドでローカルインストールできる。
 
 ```sh
 $ npm install
@@ -30,7 +44,7 @@ const options = {
 
 ## 実行
 
-`package.json` ファイルにの scripts セクション(npm-scripts)で指定したコマンド `npm start` で `index.js` を実行できる。
+`package.json` ファイルの scripts セクション(npm-scripts)に指定したコマンド `npm start` で `index.js` を実行できる。
 
 ```sh
 $ npm start
