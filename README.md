@@ -41,10 +41,10 @@ $ npm install
 `index.js` ファイルの以下の箇所を変更することでクエリを構築できる。
 
 ```js
-const words = "非同期処理";
+// クエリ構築
+const queryWords = "JavaScript lang:ja";
 const options = { 
-  "media.fields": "url",
-  "max_results": 10,
+  "max_results": 10, // 最大取得ツイート数
 };
 ```
 
@@ -58,7 +58,9 @@ $ npm start
 > twitter-v2-test@1.0.0 start
 > node index.js
 
-# オブジェクトの配列で取得ツイートが出力される
+# 成功時メッセージ
 --> succeed writing date!
 ```
+
+存在しない場合には `results/` ディレクトリを作成して、その中に結果となる CSV ファイルを日付名で出力する。
 
