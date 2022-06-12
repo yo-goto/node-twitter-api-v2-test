@@ -16,25 +16,27 @@ if (typeof token === "undefined") {
 const client = new TwitterApi(token);
 
 // クエリ構築
-const words = "非同期処理";
+const queryWords = "JavaScript lang:ja";
 const options = { 
-  "media.fields": "url",
-  "max_results": 10,
+  "max_results": 10, // 最大取得ツイート数
 };
 
 try {
-  const jsTweets = await client.v2.search(words, options);
+  const jsTweets = await client.v2.search(queryWords, options);
   // 返り値が TweetSearchRecentV2Paginetor が入る Promise 
   const csvString = stringify(jsTweets.tweets, {
     header: false,
   });
 
-  const dirName = "results";
   const timeStamp = format(new Date(), "yyyy-MM-dd-kk-mm-ss");
   const fileName = `${timeStamp}.csv`;
+
+  const dirName = "results";
   const dirPath = join(process.cwd(), dirName);
+  // process.cwd() でカレントディレクトリのパスを取得して join でパスを結合
 
   try {
+    // ディレクトリの存在を保証する
     if (!fs.existsSync(dirPath)) {
       fs.mkdirSync(dirPath);
     }
