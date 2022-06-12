@@ -27,6 +27,8 @@ fish_add_path $VOLTA_HOME/bin
 `package.json` に記載されている依存関係を以下のコマンドでローカルインストールできる。
 
 ```sh
+$ mkdir my-project
+$ cd ./my-project
 $ npm install
 ```
 
