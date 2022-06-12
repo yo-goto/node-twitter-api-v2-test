@@ -65,7 +65,7 @@ $ npm start
 > node index.js
 
 # 成功時メッセージ
---> succeed writing date!
+ファイルの書き込みに成功しました
 ```
 
 存在しない場合には `results/` ディレクトリを作成して、その中に結果となる CSV ファイルを日付名で出力する。
