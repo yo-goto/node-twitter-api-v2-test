@@ -40,9 +40,9 @@ try {
 
 /**
  * ツイートの取得
- * @param {string} query
- * @param {object} option
- * @returns {Promise<TweetSearchRecentV2Paginator|void>} 取得した tweet
+ * @param {string} query 検索文字列
+ * @param {object} option 検索オプション
+ * @returns {Promise<TweetSearchRecentV2Paginator|void>} 成功時に取得した tweet を入れた Promise
  */
 async function fetchTweets(query, option) {
   try {
