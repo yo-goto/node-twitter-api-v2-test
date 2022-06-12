@@ -13,8 +13,6 @@ JS で Twitter API を叩く練習。以下 `npm install` でインストール�
 Node.js とツールチェインの管理ツールである[Volta](https://volta.sh)を Homebrew でインストール。`package.json` でバージョン固定(`volta pin node`)してあるのでそのバージョンの Node と npm を使用する。
 
 ```sh
-# node のLTS版がインストールされる(16.15.1)
-# npm も同時にインストールされる
 $ brew install volta
 ```
 
@@ -26,11 +24,19 @@ set -gx VOLTA_HOME $HOME/.volta
 fish_add_path $VOLTA_HOME/bin
 ```
 
+Volta を使う準備ができたら、以下のコマンドで node と npm のインストールを行う。
+
+```sh
+$ volta install node
+# node のLTS版がインストールされる(16.15.1)
+# npm も同時にインストールされる
+$ volta ls
+# インストールした node のバージョンが表示される
+```
+
 `package.json` に記載されている依存関係を以下のコマンドでローカルインストールできる。
 
 ```sh
-$ mkdir my-project
-$ cd ./my-project
 $ npm install
 ```
 
