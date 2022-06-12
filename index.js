@@ -44,7 +44,7 @@ try {
   }
 
   await fsPromises.writeFile(`${dirPath}/${fileName}`, csvString);
-  console.log("--> succeed writing date!")
+  console.log("--> succeed writing data!")
 } catch (err) {
   console.error(err);
 }
