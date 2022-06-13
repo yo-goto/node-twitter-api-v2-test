@@ -35,19 +35,19 @@ try {
   fs.writeFileSync(`${dirPath}/${fileName}`, csvString);
   console.log("ファイルの書き込みに成功しました");
 } catch (err) {
+  console.log("ファイルの書き込みに失敗しました");
   console.error(err);
 }
 
 /**
  * ツイートの取得
  * @param {string} query 検索文字列
- * @param {object} option 検索オプション
+ * @param {Object} option 検索オプション
  * @returns {Promise<TweetSearchRecentV2Paginator|void>} 成功時に取得した tweet を入れた Promise
  */
 async function fetchTweets(query, option) {
   try {
     return await client.v2.search(query, option);
-    // 返り値が TweetSearchRecentV2Paginetor が入る Promise
   } catch (e) {
     console.log("データの取得に失敗しました");
     console.error(e);
