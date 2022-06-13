@@ -6,11 +6,11 @@ JS で Twitter API を叩く練習。以下 `npm install` でインストール�
 - [twitter-api-v2](https://github.com/PLhery/node-twitter-api-v2) : node 環境で使える twitter API v2 のラッパーライブラリ
 - [dotenv](https://github.com/motdotla/dotenv) : カレントディレクトリに置かれた `.env` ファイルから環境変数を読むためのライブラリ
 - [date-fns](https://github.com/date-fns/date-fns) : 日付操作のライブラリ
-- [csv-stringify](https://github.com/adaltas/node-csv/tree/master/packages/csv-stringify) : CSV のパースライブラリ
+- [csv-stringify](https://github.com/adaltas/node-csv/tree/master/packages/csv-stringify) : オブジェクトや配列を CSV 用の文字列化するライブラリ
 
 ## セットアップ方法
 
-Node.js とツールチェインの管理ツールである[Volta](https://volta.sh)を Homebrew でインストール。`package.json` でバージョン固定(`volta pin node`)してあるのでそのバージョンの Node と npm を使用する。
+JavaScript の実行環境である Node.js とツールチェインの管理ツールである [Volta](https://volta.sh) を Homebrew でインストールする。`package.json` で Volta を使ってそれぞれのバージョンを固定(`volta pin node`)してあるのでそのバージョンの Node と npm を使用する。
 
 ```sh
 $ brew install volta
